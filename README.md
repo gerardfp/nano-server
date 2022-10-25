@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     // ...
-    implementation 'com.github.gerardfp:megasimpleserver:1.0'
+    implementation 'com.github.gerardfp:mega-simple-server:1.0'
 }
 
 ```
