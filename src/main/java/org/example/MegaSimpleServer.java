@@ -10,9 +10,11 @@ public class MegaSimpleServer {
     interface Response {
         void send(String response);
     }
+
     interface Handler {
         void handle(String query, Response response) throws Exception;
     }
+
     HttpServer server;
 
     public static MegaSimpleServer create(String ip, int port)  {
