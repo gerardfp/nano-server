@@ -32,6 +32,7 @@ publishing {
     }
     publications {
         gpr(MavenPublication) {
+            artifactId = "megasimpleserver"
             from(components.java)
         }
     }
