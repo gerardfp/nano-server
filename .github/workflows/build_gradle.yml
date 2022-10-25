@@ -55,3 +55,5 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: libs/MegaSimpleServer-1.0.jar
           asset_name: MegaSimpleServer-1.0.jar
+
+          # https://gist.github.com/alexanderbazo/227476190ef5ab655795e34ec0d314d6

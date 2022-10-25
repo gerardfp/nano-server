@@ -31,7 +31,7 @@ public class MegaSimpleServer {
         server.start();
     }
 
-    void endpoint(String path, Handler handler) {
+    MegaSimpleServer endpoint(String path, Handler handler) {
         server.createContext(path, httpExchange -> {
             String query = "";
             try {
@@ -53,5 +53,6 @@ public class MegaSimpleServer {
                 throw new RuntimeException(e);
             }
         });
+        return this;
     }
 }
