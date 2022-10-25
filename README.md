@@ -1,4 +1,21 @@
+## install
+
+Add to `build.gradle`
+``` groovy
+repositories {
+    ...
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    ...
+    implementation 'com.github.gerardfp:megasimpleserver:1.0'
+}
+
 ```
+
+## use
+```java
 MegaSimpleServer
         .create("localhost", 8002)
         .endpoint("/get", (query, response) -> {
@@ -10,7 +27,7 @@ MegaSimpleServer
         .start();
 ```
 
-```
+```java
 MegaSimpleServer
         .create("localhost",8001)
         .endpoint("/get", (query, res) -> {
@@ -21,4 +38,4 @@ MegaSimpleServer
             res.send("ok");
         })
         .start();
-``
+```
