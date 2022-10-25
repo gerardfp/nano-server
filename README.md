@@ -3,12 +3,12 @@
 Add to `build.gradle`
 ``` groovy
 repositories {
-    ...
+    // ...
     maven { url "https://jitpack.io" }
 }
 
 dependencies {
-    ...
+    // ...
     implementation 'com.github.gerardfp:megasimpleserver:1.0'
 }
 
