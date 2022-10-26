@@ -7,15 +7,15 @@ import java.net.InetSocketAddress;
 
 public class NanoServer {
 
-    interface Response {
+    public interface Response {
         void send(String response);
     }
 
-    interface Handler {
+    public interface Handler {
         void handle(String query, Response response) throws Exception;
     }
 
-    HttpServer server;
+    public HttpServer server;
 
     public static NanoServer create(String ip, int port)  {
         NanoServer nanoServer = new NanoServer();
@@ -33,7 +33,7 @@ public class NanoServer {
         server.start();
     }
 
-    NanoServer endpoint(String path, Handler handler) {
+    public NanoServer endpoint(String path, Handler handler) {
         server.createContext(path, httpExchange -> {
             String query = "";
             try {
