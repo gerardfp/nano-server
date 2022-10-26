@@ -19,6 +19,16 @@ version '1.0'
 //    useJUnitPlatform()
 //}
 //
+
+publishing {
+    publications {
+        gpr(MavenPublication) {
+            artifactId = "nano-server"
+            from(components.java)
+        }
+    }
+}
+
 //publishing {
 //    repositories {
 //        maven {
