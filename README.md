@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     // ...
-    implementation 'com.github.gerardfp:nano-server:1.0'
+    implementation 'com.github.gerardfp:nano-server:0.1'
 }
 
 ```
