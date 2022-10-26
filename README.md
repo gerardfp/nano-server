@@ -9,26 +9,26 @@ repositories {
 
 dependencies {
     // ...
-    implementation 'com.github.gerardfp:mega-simple-server:1.0'
+    implementation 'com.github.gerardfp:nano-server:1.0'
 }
 
 ```
 
 ## use
 ```java
-MegaSimpleServer
+NanoServer
         .create("localhost", 8002)
-        .endpoint("/get", (query, response) -> {
-            response.send("<p>Query = " + query + "</p>");
-        })
         .endpoint("/", (query, response) -> {
             response.send("<h1>Hello</h1>");
+        })
+        .endpoint("/get", (query, response) -> {
+            response.send("<p>Query = " + query + "</p>");
         })
         .start();
 ```
 
 ```java
-MegaSimpleServer
+NanoServer
         .create("localhost",8001)
         .endpoint("/get", (query, res) -> {
             res.send(Files.readString(Paths.get("todos.db")));
