@@ -1,11 +1,11 @@
-package org.example;
+package com.github.gerardfp;
 
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
-public class MegaSimpleServer {
+public class NanoServer {
 
     interface Response {
         void send(String response);
@@ -17,23 +17,23 @@ public class MegaSimpleServer {
 
     HttpServer server;
 
-    public static MegaSimpleServer create(String ip, int port)  {
-        MegaSimpleServer megaSimpleServer = new MegaSimpleServer();
+    public static NanoServer create(String ip, int port)  {
+        NanoServer nanoServer = new NanoServer();
 
         try {
-            megaSimpleServer.server = HttpServer.create(new InetSocketAddress(ip, port), 0);
+            nanoServer.server = HttpServer.create(new InetSocketAddress(ip, port), 0);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        return megaSimpleServer;
+        return nanoServer;
     }
 
     public void start() {
         server.start();
     }
 
-    MegaSimpleServer endpoint(String path, Handler handler) {
+    NanoServer endpoint(String path, Handler handler) {
         server.createContext(path, httpExchange -> {
             String query = "";
             try {
