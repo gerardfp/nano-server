@@ -18,11 +18,11 @@ dependencies {
 ```java
 NanoServer
         .create("localhost", 8002)
-        .endpoint("/get", (query, response) -> {
-            response.send("<p>Query = " + query + "</p>");
-        })
         .endpoint("/", (query, response) -> {
             response.send("<h1>Hello</h1>");
+        })
+        .endpoint("/get", (query, response) -> {
+            response.send("<p>Query = " + query + "</p>");
         })
         .start();
 ```
